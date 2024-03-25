@@ -1,13 +1,8 @@
 package seabattles.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.NaturalId;
 
 import java.util.Date;
 
@@ -16,12 +11,14 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 public class Battle {
+
     @Id
-    @Column(name = "battle_name")
+    private Long id;
+
+    @NaturalId
+    @Column(unique = true)
     private String battleName;
 
-    @Column(name = "battle_date")
     private Date battleDate;
 }

@@ -1,10 +1,8 @@
 package seabattles.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.annotations.NaturalId;
 
 import java.util.Date;
 
@@ -15,19 +13,21 @@ import java.util.Date;
 @Getter
 @Setter
 public class Warship {
-    enum WARSHIP_CLASS {AIRCRAFT_CARRIER, BATTLECRUISER, BATTLESHIP, DESTROYER, SUBMARINE, TRANSPORT, MERCHANT}
+    public enum WARSHIP_CLASS {AIRCRAFT_CARRIER, BATTLECRUISER, BATTLESHIP, DESTROYER, SUBMARINE, TRANSPORT, MERCHANT}
 
     @Id
-    @Column(name = "warship_name")
+    @Setter(AccessLevel.NONE)
+    private Long id;
+
+    @NaturalId
+    @Setter(AccessLevel.NONE)
     private String warshipName;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "warship_class")
     private WARSHIP_CLASS warshipClass;
 
-    @Column(name = "commission")
     private Date commissionDate;
 
-    @Column(name = "decommission")
     private Date decommissionDate;
+
 }

@@ -1,10 +1,7 @@
 package seabattles.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "users")
@@ -14,16 +11,12 @@ import lombok.Setter;
 @Setter
 public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
+    @Setter(AccessLevel.NONE)
+    private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "login")
     private String login;
 
-    @Column(name = "password")
     private String password;
 }

@@ -1,7 +1,7 @@
 package seabattles.aspect.exception;
 
-public class UserPasswordException extends AbstractUserException {
-    public UserPasswordException(String message){
+public class UserException extends MyAbstractException {
+    public UserException(String message) {
         this.message = message;
     }
 

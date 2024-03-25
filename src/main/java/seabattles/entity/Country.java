@@ -1,25 +1,23 @@
 package seabattles.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name = "countries")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 public class Country {
-    enum SIDE {ALLIES, NAZI}
+    public enum SIDE {ALLIES, NAZI}
 
     @Id
-    @Column(name = "country_name")
+    private Long id;
+
+    @NaturalId
     private String countryName;
 
-    @Column(name = "side")
     @Enumerated(EnumType.STRING)
     private SIDE side;
 }

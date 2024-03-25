@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class MapperDtoToView {
     @Autowired
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
 
     public List<UserViewModel> mapUserDtoListToView(List<UserDto> userDtoList){
         return userDtoList.stream().map(userDto ->

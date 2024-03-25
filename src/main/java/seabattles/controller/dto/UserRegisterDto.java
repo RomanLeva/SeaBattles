@@ -1,4 +1,4 @@
-package seabattles.service.dto;
+package seabattles.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class UserDto {
+public class UserRegisterDto {
+    private String name;
     private String login;
+    private String password;
 }

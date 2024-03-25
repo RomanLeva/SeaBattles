@@ -9,6 +9,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class UserDto {
-    private String login;
+public class WarshipDto {
+   private String warshipName;
+   private String warshipClass;
+   private String warshipCommissionDate;
+   private String warshipDecommissionDate;
 }

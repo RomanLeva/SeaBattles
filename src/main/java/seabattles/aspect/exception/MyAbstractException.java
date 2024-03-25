@@ -1,6 +1,6 @@
 package seabattles.aspect.exception;
 
-public abstract class AbstractUserException extends RuntimeException{
+public abstract class MyAbstractException extends RuntimeException{
     protected String message;
 
 }
