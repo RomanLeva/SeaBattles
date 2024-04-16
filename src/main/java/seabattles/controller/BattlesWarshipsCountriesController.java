@@ -60,7 +60,7 @@ public class BattlesWarshipsCountriesController {
     }
 
     @PostMapping("/create_battle_member")
-    public ResponseEntity<ControllerResponse> createBattle(@RequestBody BattleMemberCreateDto memberCreateDto) {
+    public ResponseEntity<ControllerResponse> createBattleMember(@RequestBody BattleMemberCreateDto memberCreateDto) {
         battlesAndWarshipsService.createBattleMember(memberCreateDto);
 
         return ResponseEntity.ok(new ControllerResponse("Battle member created."));
