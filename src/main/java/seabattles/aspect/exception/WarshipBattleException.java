@@ -1,7 +1,7 @@
 package seabattles.aspect.exception;
 
-public class WarshipException extends MyAbstractException{
-    public WarshipException(String message){
+public class WarshipBattleException extends MyAbstractException{
+    public WarshipBattleException(String message){
         this.message = message;
     }
 

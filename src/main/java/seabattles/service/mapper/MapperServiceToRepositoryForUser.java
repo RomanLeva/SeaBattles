@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
-public class MapperServiceToRepositoryUserDto {
+public class MapperServiceToRepositoryForUser {
     @Autowired
     private final ModelMapper modelMapper;
 

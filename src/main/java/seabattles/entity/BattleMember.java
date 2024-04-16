@@ -10,18 +10,23 @@ import lombok.*;
 @Getter
 @Setter
 public class BattleMember {
-    public enum STATUS {SURVIVED, DESTROYED, WOUNDED}
+    public enum STATUS {SURVIVED, DESTROYED, DAMAGED}
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Setter(AccessLevel.NONE)
+    @Column(name = "id")
     private Long id;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade=CascadeType.ALL)
+    @JoinColumn(name = "warship_id")
     private Warship warship;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade=CascadeType.ALL)
+    @JoinColumn(name = "battle_id")
     private Battle battle;
 
     @Enumerated(EnumType.STRING)
-    private STATUS result;
+    @Column(name = "status")
+    private STATUS status;
 }

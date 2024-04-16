@@ -2,12 +2,16 @@ package seabattles.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 
+@NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class WarshipRegisterDto {
+@Setter
+public class WarshipCreateDto {
     public enum WARSHIP_CLASS {AIRCRAFT_CARRIER, BATTLECRUISER, BATTLESHIP, DESTROYER, SUBMARINE, TRANSPORT, MERCHANT}
 
     private String warshipName;

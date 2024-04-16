@@ -13,5 +13,5 @@ public class WarshipDto {
    private String warshipName;
    private String warshipClass;
    private String warshipCommissionDate;
-   private String warshipDecommissionDate;
+   private String warshipDecommissionDate = "";
 }

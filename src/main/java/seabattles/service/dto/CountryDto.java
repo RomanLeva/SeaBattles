@@ -1,15 +1,15 @@
-package seabattles.controller.dto;
+package seabattles.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class UserAuthDto {
-    private String login;
-    private String password;
+public class CountryDto {
+    private String countryName;
+    private String countrySide;
 }

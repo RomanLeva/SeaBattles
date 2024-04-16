@@ -11,14 +11,18 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Setter
 public class Battle {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     @NaturalId
-    @Column(unique = true)
+    @Column(name = "battle_name", unique = true)
     private String battleName;
 
+    @Column(name = "battle_date")
     private Date battleDate;
 }

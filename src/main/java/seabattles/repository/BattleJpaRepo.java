@@ -6,4 +6,5 @@ import seabattles.entity.Battle;
 
 @Repository
 public interface BattleJpaRepo extends JpaRepository<Battle, Long> {
+    Battle findByBattleName(String battleName);
 }

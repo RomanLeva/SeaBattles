@@ -1,4 +1,4 @@
-package seabattles.controller.dto;
+package seabattles.service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
