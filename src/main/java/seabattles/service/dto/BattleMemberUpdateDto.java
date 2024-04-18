@@ -9,10 +9,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class BattleMemberCreateDto {
+public class BattleMemberUpdateDto {
     public enum STATUS {SURVIVED, DESTROYED, DAMAGED}
 
-    private WarshipDto warship;
-    private BattleDto battle;
-    private STATUS status;
+    private WarshipDto oldWarship;
+    private BattleDto oldBattle;
+
+    private WarshipDto newWarship;
+    private BattleDto newBattle;
+    private STATUS newStatus;
 }

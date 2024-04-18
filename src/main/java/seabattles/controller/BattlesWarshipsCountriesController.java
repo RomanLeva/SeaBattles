@@ -65,4 +65,11 @@ public class BattlesWarshipsCountriesController {
 
         return ResponseEntity.ok(new ControllerResponse("Battle member created."));
     }
+
+    @PostMapping("/update_battle_member")
+    public ResponseEntity<ControllerResponse> updateBattleMember(@RequestBody BattleMemberUpdateDto memberUpdateDto) {
+        battlesAndWarshipsService.updateBattleMember(memberUpdateDto);
+
+        return ResponseEntity.ok(new ControllerResponse("Battle member updated."));
+    }
 }
